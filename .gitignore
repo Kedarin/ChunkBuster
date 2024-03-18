@@ -101,3 +101,6 @@ hs_err_pid*
 
 
 # End of https://www.gitignore.io/api/java,intellij
+# Project exclude paths
+/Abstraction/target/
+/WG_6/target/

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Abstraction/Abstraction.iml" filepath="$PROJECT_DIR$/Abstraction/Abstraction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ChunkBusterParent.iml" filepath="$PROJECT_DIR$/ChunkBusterParent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ChunkBusterPlugin/ChunkBusterPlugin.iml" filepath="$PROJECT_DIR$/ChunkBusterPlugin/ChunkBusterPlugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WG_6/WG_6.iml" filepath="$PROJECT_DIR$/WG_6/WG_6.iml" />
+    </modules>
+  </component>
+</project>

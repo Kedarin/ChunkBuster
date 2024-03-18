@@ -35,27 +35,15 @@ public class HookUtils {
                 main.getLogger().info("Hooked into the new FactionsUUID/SavageFactions role system.");
                 enabledHooks.put(HookType.FACTIONSUUID_ROLE, new FactionsUUID_New());
             } catch (ClassNotFoundException e) {
-                main.getLogger().info("Hooked into the old FactionsUUID/SavageFactions role system.");
-                enabledHooks.put(HookType.FACTIONSUUID_ROLE, new FactionsUUID_Old());
+                System.out.println(e);
             }
         }
         if (pm.getPlugin("WorldGuard") != null) {
             String pluginVersion = main.getServer().getPluginManager().getPlugin("WorldGuard").getDescription().getVersion();
-            if (pluginVersion.startsWith("7") && pm.getPlugin("WorldEdit") != null) {
-                enabledHooks.put(HookType.WORLDGUARD, new WorldGuard_7());
-                main.getLogger().info("Hooked into WorldGuard 7");
-            } else if (pluginVersion.startsWith("6")) {
+             if (pluginVersion.startsWith("6")) {
                 enabledHooks.put(HookType.WORLDGUARD, new WorldGuard_6());
                 main.getLogger().info("Hooked into WorldGuard 6");
             }
-        }
-        if (pm.getPlugin("Towny") != null) {
-            main.getLogger().info("Hooked into Towny");
-            enabledHooks.put(HookType.TOWNY, new TownyHook());
-        }
-        if (pm.getPlugin("CoreProtect") != null) {
-            main.getLogger().info("Hooked into CoreProtect");
-            enabledHooks.put(HookType.COREPROTECT, new CoreProtectHook());
         }
     }
 
@@ -105,10 +93,6 @@ public class HookUtils {
             IWorldGuardHook worldGuardHook = (IWorldGuardHook)enabledHooks.get(HookType.WORLDGUARD);
             if (!worldGuardHook.checkLocationBreakFlag(loc.getChunk(), p)) canBuild = false;
         }
-        if (main.getConfigValues().townyHookEnabled() && enabledHooks.containsKey(HookType.TOWNY)) {
-            TownyHook townyHook = (TownyHook)enabledHooks.get(HookType.TOWNY);
-            if (!townyHook.canBuild(loc.getChunk(), p)) canBuild = false;
-        }
         return canBuild;
     }
 
@@ -130,12 +114,6 @@ public class HookUtils {
     /**
      * Log a block as removed in CoreProtect
      */
-    public void logBlock(Player p, Location loc, Material mat, byte damage) {
-        if (main.getConfigValues().coreprotectHookEnabled() && enabledHooks.containsKey(HookType.COREPROTECT)) {
-            CoreProtectHook coreProtectHook = (CoreProtectHook)enabledHooks.get(HookType.COREPROTECT);
-            coreProtectHook.logBlock(p.getName(), loc, mat, damage);
-        }
-    }
 
     public enum HookType {
         MCOREFACTIONS,

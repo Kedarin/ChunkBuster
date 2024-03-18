@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ChunkBusterKeda">
+    <output-path>$PROJECT_DIR$/out/artifacts/ChunkBusterKeda</output-path>
+    <root id="archive" name="ChunkBusterKeda.jar">
+      <element id="file-copy" path="$PROJECT_DIR$/ChunkBusterPlugin/src/main/resources/config.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/ChunkBusterPlugin/src/main/resources/plugin.yml" />
+      <element id="module-output" name="ChunkBusterPlugin" />
+      <element id="module-output" name="WG_6" />
+      <element id="module-output" name="Abstraction" />
+    </root>
+  </artifact>
+</component>

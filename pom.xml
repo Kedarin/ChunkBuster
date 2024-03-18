@@ -10,7 +10,6 @@
     <version>parent</version>
     <modules>
         <module>WG_6</module>
-        <module>WG_7</module>
         <module>ChunkBusterPlugin</module>
         <module>Abstraction</module>
     </modules>
@@ -20,10 +19,6 @@
         <repository>
             <id>spigotmc-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
-        </repository>
-        <repository>
-            <id>sk89q-repo</id>
-            <url>http://maven.sk89q.com/repo/</url>
         </repository>
     </repositories>
 </project>

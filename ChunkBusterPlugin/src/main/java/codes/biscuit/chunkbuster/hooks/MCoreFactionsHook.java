@@ -11,7 +11,7 @@ import org.bukkit.entity.Player;
 
 class MCoreFactionsHook {
 
-    // This hook works with MassiveCore Factions only.
+    // This hook works with MassiveCore Factions only. chocbar
     private ChunkBuster main;
 
     MCoreFactionsHook(ChunkBuster main) {
